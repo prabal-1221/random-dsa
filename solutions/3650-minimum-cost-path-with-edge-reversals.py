@@ -1,17 +1,17 @@
+import ast
 import heapq
 from collections import defaultdict
-from typing import List
-import ast
+
 
 class Solution:
-    def minCost(self, n: int, edges: List[List[int]]) -> int:
+    def minCost(self, n: int, edges: list[list[int]]) -> int:
         graph = defaultdict(list)
 
         for u, v, w in edges:
             graph[u].append((v, w))
             graph[v].append((u, 2 * w))
 
-        dist = [float('inf')] * n
+        dist = [float("inf")] * n
         dist[0] = 0
         pq = [(0, 0)]
 
