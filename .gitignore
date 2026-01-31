@@ -7,3 +7,4 @@ __pycache__/
 .vscode/
 .DS_Store
 .cph
+.ruff_cache
